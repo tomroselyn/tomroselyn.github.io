@@ -1,3 +1,89 @@
-p {
-  color: red;
+body {
+    background: lightgrey url(white-brick.jpg);
+    background-attachment: fixed;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 13px;
+}
+
+div.uppercontent {
+    width: 800px;
+    margin: 60px auto;
+    height: 425px;
+    padding: 30px 60px;
+    background: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 20px;
+    word-break: keep-all;
+}
+
+div.contactinfo {
+    width: 520px;
+}
+
+div.lowercontent {
+    width: 800px;
+    margin: 60px auto;
+    padding: 30px 60px;
+    background: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 20px;
+}
+
+h1 {
+    font-family: 'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    font-size: 120px;
+    line-height: 90%;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin: 25px 0 25px 0;
+}
+
+h2 {
+    font-family: 'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    font-size: 21px;
+    font-weight: 600;
+    margin-top: 40px;
+    border-bottom: 2px dashed dimgrey;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+p.headline {
+    font-style: italic;
+    font-size: 18px;
+    margin: 25px 0 30px 0;
+}
+
+p.further {
+    font-style: italic;
+    text-align: center;
+    margin-top: 30px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.profilepic {
+    position: relative;
+    left: 555px;
+    top: -410px;
+    width: 350px;
+    float: none;
+    transform: rotate(4deg);
+}
+
+a {
+    color: darkorange;
+    text-decoration: none;
+}
+
+a:hover {
+    color: beige;
+    background-color: dimgrey;
 }
