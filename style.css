@@ -5,6 +5,16 @@ body {
   height: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: #558b2f;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 header {
   position: relative;
   background-color: black;
@@ -80,12 +90,40 @@ main {
     min-height: 100vh;
     padding: 50px;
     font-family: 'Montserrat';
-    font-weight: 400;
     font-size: 16px;
+}
+
+main .title {
+    text-align: center;
+    font-family: 'Cutive Mono';
+    margin: 40px 0 20px 0;
+}
+
+main .subtitle {
+    text-align: center;
+}
+
+.card {
+    background-color: whitesmoke;
 }
 
 #page-content {
   flex: 1 0 auto;
+}
+
+.portfolio-img {
+    height: 300px;
+}
+
+.connect-list {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+}
+
+.connect-list li {
+    display: inline-block;
+    padding: 0 20px;
 }
 
 #sticky-footer {
