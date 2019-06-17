@@ -103,6 +103,10 @@ main .subtitle {
     text-align: center;
 }
 
+.row {
+    margin: 30px 0;
+}
+
 .card {
     background-color: whitesmoke;
 }
