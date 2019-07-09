@@ -133,3 +133,9 @@ main .subtitle {
 #sticky-footer {
   flex-shrink: none;
 }
+
+.technologies {
+  font-size: 50px;
+  text-align: center;
+  width: 50%;
+}
