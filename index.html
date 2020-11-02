@@ -1,197 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jenny & Thomas</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Thomas Roselyn</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <div class="overlay"></div>
-        <!-- <img src="images/jenny-thomas.jpg" /> -->
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="images/bricks-and-wine.mp4" type="video/mp4">
-        </video>
-        <div class="container h-100">
-            <div class="d-flex h-100 text-center align-items-center">
-                <div class="w-100 text-white title">
-                    <h1 class="display-3">jenny & thomas</h1>
-                    <p class="lead mb-0">august 7, 2021</p>
-                    <a href="#rsvp"><button class="btn btn-lg btn-primary">RSVP</button></a>
-                    <!-- <div class="container text-center icons">
-                        <a href="http://www.github.com/thomasroselyn" target="_blank">
-                            <ion-icon name="logo-github" size="large"></ion-icon>
-                        </a>
-                        <a href="http://www.linkedin.com/in/thomasroselyn" target="_blank">
-                            <ion-icon name="logo-linkedin" size="large"></ion-icon>
-                        </a>
-                    </div> -->
-                    <div class="mouse_scroll">
-                    
-                        <div class="mouse">
-                            <div class="wheel"></div>
-                        </div>
-                        <div>
-                            <span class="m_scroll_arrows unu"></span>
-                            <span class="m_scroll_arrows doi"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+  <header>
+    <div class="title">
+      <h1>thomas roselyn</h1>
+      <p>full stack web developer / twin cities, mn</p>
+      <div class="icons">
+        <a href="http://www.github.com/thomasroselyn" target="_blank">
+          <ion-icon name="logo-github" size="large"></ion-icon>
+        </a>
+        <a href="http://www.linkedin.com/in/thomasroselyn" target="_blank">
+          <ion-icon name="logo-linkedin" size="large"></ion-icon>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="portfolio">
+      
+      <!-- project 1 -->
+      <div class="project">
+        <button class="btn accordion">
+          <h3>FRIENDLY REMINDER</h3>
+            <p>A web app designed to make it easy to keep up with friends on a regular basis</p>
+        </button>
+        <div class="panel card flex-md-row">
+          <div class="card-body d-flex flex-column">
+            <div class="mb-4"><strong>Built with:</strong></div>
+            <p class="card-text mb-4">React, Redux, Node.js, Express, PostgreSQL, Material-UI, Sweet Alerts, Nodemailer, and Twilio</p>
+            <a class="card-text mb-4" href="https://github.com/thomasroselyn/friendly-reminder" target="_blank"><button class="btn">View on Github</button></a>
+          </div>
+          <img class="portfolio-image card-img-right flex-auto d-none d-md-block" src="images/friendly-reminder-screenshot.png" alt="Friendly Reminder">
         </div>
-    </header>
+      </div>
 
-    <main>
-        <!-- navigation -->
-        <div id="navwrapper">
-            <div id="navbar" class="center nav justify-content-center">
-                <a class="nav-link" href="#weddingday">Wedding Day</a>
-                <a class="nav-link" href="#ourstory">Our Story</a>
-                <a class="nav-link" href="#photogallery">Photo Gallery</a>
-                <a class="nav-link" href="#minneapolis">Minneapolis</a>
-                <a class="nav-link" href="#rsvp">RSVP</a>
-                <a class="nav-link" href="#registry">Registry</a>
-            </div>
+      <!-- project 2 -->
+      <div class="project">
+        <button class="btn accordion">
+          <h3>BRAIN CHANGE</h3>
+          <p>A React multi-page survey and admin portal, built for a client</p>
+        </button>
+        <div class="panel card flex-md-row">
+          <div class="card-body d-flex flex-column">
+            <div class="mb-4"><strong>Built with:</strong></div>
+            <p class="card-text mb-4">React, Redux, Node.js, Express, PostgreSQL, Material-UI, and Sweet Alerts</p>
+            <a class="card-text mb-4" href="https://github.com/thomasroselyn/brain-change" target="_blank"><button
+                class="btn">View on Github</button></a>
+          </div>
+          <img class="portfolio-image card-img-right flex-auto d-none d-md-block"
+            src="images/brain-change-screenshot.png" alt="Brain Change">
         </div>
+      </div>
 
-        <section id="weddingday">
-            <a name="weddingday"></a>
-            <h2 class="title">wedding day</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Dignissim diam quis enim lobortis. Eget
-                mauris pharetra et ultrices. Commodo odio aenean sed adipiscing. Elit sed vulputate mi sit amet mauris. Id aliquet risus
-                feugiat in ante metus dictum at. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. Mattis ullamcorper
-                velit sed ullamcorper morbi tincidunt. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Praesent
-                elementum facilisis leo vel fringilla est ullamcorper. Nullam eget felis eget nunc lobortis mattis aliquam faucibus.
-                Sapien pellentesque habitant morbi tristique senectus et netus.</p>
-        </section>
-
-        <img class="divider" src="images/flowers2.png" alt="flowers" />
-            
-        <section id="ourstory">
-            <a name="ourstory"></a>
-            <h2 class="title">our story</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna
-                aliqua. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Dignissim diam quis enim lobortis.
-                Eget
-                mauris pharetra et ultrices. Commodo odio aenean sed adipiscing. Elit sed vulputate mi sit amet mauris. Id
-                aliquet risus
-                feugiat in ante metus dictum at. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. Mattis
-                ullamcorper
-                velit sed ullamcorper morbi tincidunt. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Praesent
-                elementum facilisis leo vel fringilla est ullamcorper. Nullam eget felis eget nunc lobortis mattis aliquam
-                faucibus.
-                Sapien pellentesque habitant morbi tristique senectus et netus.</p>
-        </section>
-
-        <img class="divider" src="images/flowers2.png" alt="flowers" />
-
-        <section id="photogallery">
-            <a name="photogallery"></a>
-            <h2 class="title">photo gallery</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna
-                aliqua. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Dignissim diam quis enim lobortis.
-                Eget
-                mauris pharetra et ultrices. Commodo odio aenean sed adipiscing. Elit sed vulputate mi sit amet mauris. Id
-                aliquet risus
-                feugiat in ante metus dictum at. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. Mattis
-                ullamcorper
-                velit sed ullamcorper morbi tincidunt. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Praesent
-                elementum facilisis leo vel fringilla est ullamcorper. Nullam eget felis eget nunc lobortis mattis aliquam
-                faucibus.
-                Sapien pellentesque habitant morbi tristique senectus et netus.</p>
-        </section>
-
-        <img class="divider" src="images/flowers2.png" alt="flowers" />
-
-        <section id="minneapolis">
-            <a name="minneapolis"></a>
-            <h2 class="title">minneapolis</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna
-                aliqua. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Dignissim diam quis enim lobortis.
-                Eget
-                mauris pharetra et ultrices. Commodo odio aenean sed adipiscing. Elit sed vulputate mi sit amet mauris. Id
-                aliquet risus
-                feugiat in ante metus dictum at. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. Mattis
-                ullamcorper
-                velit sed ullamcorper morbi tincidunt. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Praesent
-                elementum facilisis leo vel fringilla est ullamcorper. Nullam eget felis eget nunc lobortis mattis aliquam
-                faucibus.
-                Sapien pellentesque habitant morbi tristique senectus et netus.</p>
-        </section>
-
-        <img class="divider" src="images/flowers2.png" alt="flowers" />
-
-        <section id="rsvp">
-            <a name="rsvp"></a>
-            <h2 class="title">rsvp</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna
-                aliqua. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Dignissim diam quis enim lobortis.
-                Eget
-                mauris pharetra et ultrices. Commodo odio aenean sed adipiscing. Elit sed vulputate mi sit amet mauris. Id
-                aliquet risus
-                feugiat in ante metus dictum at. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. Mattis
-                ullamcorper
-                velit sed ullamcorper morbi tincidunt. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Praesent
-                elementum facilisis leo vel fringilla est ullamcorper. Nullam eget felis eget nunc lobortis mattis aliquam
-                faucibus.
-                Sapien pellentesque habitant morbi tristique senectus et netus.</p>
-        </section>
-
-        <img class="divider" src="images/flowers2.png" alt="flowers" />
-
-        <section id="registry">
-            <a name="registry"></a>
-            <h2 class="title">registry</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna
-                aliqua. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Dignissim diam quis enim lobortis.
-                Eget
-                mauris pharetra et ultrices. Commodo odio aenean sed adipiscing. Elit sed vulputate mi sit amet mauris. Id
-                aliquet risus
-                feugiat in ante metus dictum at. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. Mattis
-                ullamcorper
-                velit sed ullamcorper morbi tincidunt. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Praesent
-                elementum facilisis leo vel fringilla est ullamcorper. Nullam eget felis eget nunc lobortis mattis aliquam
-                faucibus.
-                Sapien pellentesque habitant morbi tristique senectus et netus.</p>
-        </section>
-
-    </main>
-
-    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
-        <div class="container text-center">
-            Jenny &amp; Thomas --- August 7, 2021 --- Minneapolis, Minnesota
+      <!-- project 3 -->
+      <div class="project">
+        <button class="btn accordion">
+          <h3>MOOD RING</h3>
+          <p>An image carousel built using React and Redux</p>
+        </button>
+        <div class="panel card flex-md-row">
+          <div class="card-body d-flex flex-column">
+            <div class="mb-4"><strong>Built with:</strong></div>
+            <p class="card-text mb-4">React, Redux, Node.js, Express, PostgreSQL, and Material-UI</p>
+            <a class="card-text mb-4" href="https://github.com/thomasroselyn/sagas-mood-ring" target="_blank"><button
+                class="btn">View on Github</button></a>
+          </div>
+          <img class="portfolio-image card-img-right flex-auto d-none d-md-block" src="images/mood-ring-screenshot.png"
+            alt="Mood Ring">
         </div>
-    </footer>
+      </div>
 
-    <script src="https://unpkg.com/ionicons@4.5.9-1/dist/ionicons.js"></script>
-    <script>
-        window.onscroll = function () { navbarFunction() };
-        const navbar = document.getElementById("navbar");
-        const sticky = navbar.offsetTop;
+      <!-- project 4 -->
+      <div class="project">
+        <button class="btn accordion">
+          <h3>DAILY FEEDBACK</h3>
+          <p>A multi-part feedback form and admin portal</p>
+        </button>
+        <div class="panel card flex-md-row">
+          <div class="card-body d-flex flex-column">
+            <div class="mb-4"><strong>Built with:</strong></div>
+            <p class="card-text mb-4">React, Redux, Node.js, Express, PostgreSQL, and Material-UI</p>
+            <a class="card-text mb-4" href="https://github.com/thomasroselyn/redux-feedback-loop" target="_blank"><button
+                class="btn">View on Github</button></a>
+          </div>
+          <img class="portfolio-image card-img-right flex-auto d-none d-md-block" src="images/daily-feedback-screenshot.png"
+            alt="Daily Feedback">
+        </div>
+      </div>
 
-        function navbarFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
+      <!-- project 5 -->
+      <div class="project">
+        <button class="btn accordion">
+          <h3>GALLERY OF MY LIFE</h3>
+          <p>My first full-stack React application, allowing users to add, like, and delete photos in a single page gallery</p>
+        </button>
+        <div class="panel card flex-md-row">
+          <div class="card-body d-flex flex-column">
+            <div class="mb-4"><strong>Built with:</strong></div>
+            <p class="card-text mb-4">React, Node.js, Express, and PostgreSQL</p>
+            <a class="card-text mb-4" href="https://github.com/thomasroselyn/react-photo-gallery" target="_blank"><button
+                class="btn">View on Github</button></a>
+          </div>
+          <img class="portfolio-image card-img-right flex-auto d-none d-md-block" src="images/react-gallery-screenshot.png"
+            alt="Gallery of my Life">
+        </div>
+      </div>
+
+      <!-- project 6 -->
+      <div class="project">
+        <button class="btn accordion">
+          <h3>TASK SIMPLE</h3>
+          <p>A simple to-do list full-stack application, allowing users to add, prioritize, complete, and delete tasks
+          </p>
+        </button>
+        <div class="panel card flex-md-row">
+          <div class="card-body d-flex flex-column">
+            <div class="mb-4"><strong>Built with:</strong></div>
+            <p class="card-text mb-4">JavaScript, jQuery, Node.js, Express, and PostgreSQL</p>
+            <a class="card-text mb-4" href="https://github.com/thomasroselyn/full-stack-to-do-list" target="_blank"><button
+                class="btn">View on Github</button></a>
+          </div>
+          <img class="portfolio-image card-img-right flex-auto d-none d-md-block" src="images/task-simple-screenshot.png"
+            alt="Task Simple">
+        </div>
+      </div>
+
+    </section>
+
+    <section id="technologies">
+      <i class="devicon-javascript-plain" title="JavaScript"></i>
+      <i class="devicon-react-original" title="React"></i>
+      <i class="devicon-nodejs-plain" title="Node.js"></i>
+      <i class="devicon-postgresql-plain" title="PostgreSQL"></i>
+      <i class="devicon-html5-plain" title="HTML5"></i>
+      <i class="devicon-jquery-plain" title="jQuery"></i>
+      <i class="devicon-css3-plain" title="CSS3"></i>
+      <i class="devicon-bootstrap-plain" title="Bootstrap"></i>
+      <i class="devicon-git-plain" title="Git"></i>
+      <i class="devicon-github-plain" title="GitHub"></i>
+      <i class="devicon-heroku-plain" title="Heroku"></i>
+      <i class="devicon-drupal-plain" title="Drupal"></i>
+      <i class="devicon-wordpress-plain" title="WordPress"></i>
+      <i class="devicon-mongodb-plain" title="MongoDB"></i>
+      <i class="devicon-slack-plain" title="Slack"></i>
+      <i class="devicon-trello-plain" title="Trello"></i>
+      <i class="devicon-visualstudio-plain" title="Visual Studio Code"></i>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>&copy; thomas roselyn</div>
+  </footer>
+
+  <script src="https://unpkg.com/ionicons@4.5.9-1/dist/ionicons.js"></script>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
         }
-    </script>
+      });
+    }
+  </script>
 
 </body>
-
 </html>

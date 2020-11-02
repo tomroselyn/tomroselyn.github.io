@@ -1,165 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-html,
-body {
-  height: 100%;
-  font-family: Arial;
-}
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Montserrat:300,400,700,900&display=swap');
 
 a {
     text-decoration: none;
-    color: #558b2f;
 }
 
 a:hover {
     text-decoration: none;
-    color: black;
 }
 
 header {
-  position: relative;
-  background-color: black;
   height: 100vh;
-  min-height: 25rem;
-  width: 100%;
+  width: 100vw;
+  background-color: #222;
+  color: white;
+  font-family: 'Cutive Mono';
+  text-align: center;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 header .title {
-    position: relative;
-    top: -20px;
-    font-family: 'Homemade Apple';
+  margin: 0 auto;
+  animation:
+    fadein 5s ease-in 0.2s 1;
+  animation-fill-mode: both;
+}
+
+@keyframes fadein {
+  from { opacity: 0% }
+  to { opacity: 100% }
+}
+
+header h1 {
+  font-size: 4em;
 }
 
 header .icons {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 header .icons ion-icon {
-    color: white;
+  color: white;
 }
 
 header .icons a {
-    margin: 20px;
+  margin: 20px;
 }
 
 header .icons a:hover {
-    text-decoration: none;
-}
-
-header .btn {
-  margin-top: 1em;
-  font-family: 'Montserrat';
-  background-color: rosybrown !important;
-  border: 0 !important;
-  opacity: 80%;
-}
-
-header .btn:hover {
-  background-color: blue;
-  color: black;
-}
-
-header img {
-  position: absolute;
-  min-height: 100%;
-  max-width: 100%;
-}
-
-header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-header .container {
-  position: relative;
-  z-index: 2;
-}
-
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.25;
-  z-index: 1;
-}
-
-@media (pointer: coarse) and (hover: none) {
-  header {
-    background: black no-repeat center center scroll;
-  }
-  header video {
-    display: none;
-  }
+  text-decoration: none;
 }
 
 main {
-    /* min-height: 100vh; */
-    /* padding: 50px; */
-    /* position: relative;
-    height: 100vh;
-    overflow: scroll; */
+    background-color: #eee;
+    min-height: 100vh;
+    padding: 50px;
     font-family: 'Montserrat';
     font-size: 16px;
-}
-
-#navwrapper {
-  height: 36px;
-  padding: 0;
-  margin: 0;
-}
-
-#navbar {
-  overflow: hidden;
-  width: 100%;
-  min-height: 36px;
-  background-color: rosybrown;
-  color: white;
-  opacity: 80%;
-}
-
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-#navbar a:hover {
-  color: black;
-}
-
-#navbar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .details {
-  padding-top: 40px;
 }
 
 main .title {
@@ -172,209 +70,86 @@ main .subtitle {
     text-align: center;
 }
 
-section {
-  height: 100vh;
-  padding: 100px;
-}
-
-#weddingday, #ourstory, #photogallery, #minneapolis, #rsvp {
-  /* border-bottom: 3px dashed rosybrown; */
-  box-sizing: border-box;
-}
-
-.divider {
-  display: block;
-  width: 400px;
-  margin: 0px auto;
-  text-align: center;
-}
-
 .row {
+  width: 100vw;
     margin: 30px 0;
 }
 
+.project {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .card {
-    background-color: whitesmoke;
+  background-color: #eee;
+  margin-top: 20px;
+  border: none;
+}
+
+.card button {
+  background-color: #222;
+  color: white;
+}
+
+.card button:hover {
+  background-color: #444;
+  color: white;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #222;
+  cursor: pointer;
+  padding-top: 18px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 1s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+  outline: none;
 }
 
 #page-content {
   flex: 1 0 auto;
 }
 
-.portfolio-img {
-    height: 300px;
+.panel {
+  text-align: left;
+  padding: 0;
+  padding-right: 20px;
+  background-color: #eee;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
 }
 
-.connect-list {
-    list-style: none;
-    text-align: center;
-    padding-left: 0;
+.portfolio-image {
+  height: 300px;
+  margin-bottom: 20px;
 }
 
-.connect-list li {
-    display: inline-block;
-    padding: 0 10px;
+#portfolio {
+  margin-bottom: 40px;
 }
 
-#sticky-footer {
+#technologies {
+  font-size: 44px;
+  text-align: center;
+  margin: 0;
+  color: #222;
+}
+
+footer {
+  height: 60px;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+  font-family: 'Cutive Mono';
   flex-shrink: none;
-}
-
-.mouse_scroll {
-  display: block;
-  position: absolute;
-  bottom: -14em;
-  right: -3em;
-	/* margin: 0 1em 0 auto; */
-	width: 4px;
-	height: 50px;
-	/* margin-top: 0px; */
-}
-
-
-.m_scroll_arrows
-{
-  display: block;
-  width: 5px;
-  height: 5px;
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-  transform: rotate(45deg);
-   
-  border-right: 2px solid white;
-  border-bottom: 2px solid white;
-  margin: 0 0 3px 4px;
-  
-  width: 16px;
-  height: 16px;
-}
-
-
-.unu
-{
-  margin-top: 1px;
-}
-
-.unu, .doi, .trei
-{
-    -webkit-animation: mouse-scroll 1s infinite;
-    -moz-animation: mouse-scroll 1s infinite;
-    animation: mouse-scroll 1s infinite;
-  
-}
-
-.unu
-{
-  -webkit-animation-delay: .1s;
-  -moz-animation-delay: .1s;
-  -webkit-animation-direction: alternate;
-  
-  animation-direction: alternate;
-  animation-delay: alternate;
-}
-
-.doi
-{
-  -webkit-animation-delay: .2s;
-  -moz-animation-delay: .2s;
-  -webkit-animation-direction: alternate;
-  
-  animation-delay: .2s;
-  animation-direction: alternate;
-  
-  margin-top: -6px;
-}
-
-.mouse {
-  height: 42px;
-  width: 24px;
-  border-radius: 14px;
-  transform: none;
-  border: 2px solid white;
-  top: 170px;
-}
-
-.wheel {
-  height: 5px;
-  width: 2px;
-  display: block;
-  margin: 5px auto;
-  background: white;
-  position: relative;
-  
-  height: 4px;
-  width: 4px;
-  border: 2px solid #fff;
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
-}
-
-.wheel {
-  -webkit-animation: mouse-wheel 0.6s linear infinite;
-  -moz-animation: mouse-wheel 0.6s linear infinite;
-  animation: mouse-wheel 0.6s linear infinite;
-}
-
-@-webkit-keyframes mouse-wheel{
-   0% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(6px);
-    -ms-transform: translateY(6px);
-    transform: translateY(6px);
-  }
-}
-@-moz-keyframes mouse-wheel {
-  0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
-}
-@-o-keyframes mouse-wheel {
-
-   0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
-}
-@keyframes mouse-wheel {
-
-   0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
-}
-
-@-webkit-keyframes mouse-scroll {
-
-  0%   { opacity: 0;}
-  50%  { opacity: .5;}
-  100% { opacity: 1;}
-}
-@-moz-keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
-}
-@-o-keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
-}
-@keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
+  font-size: small;
+  text-align: center;
 }
