@@ -1,30 +1,76 @@
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Montserrat:300,400,700,900&display=swap');
 
+body {
+  overflow: hidden;
+  color: #eee;
+  background-color: #222;
+  font-size: 16px;
+  font-family: 'Montserrat';
+}
+
+.scroll-parent {
+	width: 100vw;
+  height: 100vh;
+	overflow-y: scroll;
+  overflow-x: hidden;
+	scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+  scroll-snap-type: mandatory;
+}
+
+.scroll-child {
+	width: 100vw;
+  height: 100vh;
+	scroll-snap-align: start;
+  scroll-snap-stop: always;
+	padding: 2rem;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-header {
-  height: 100vh;
-  width: 100vw;
+h1, h2 {
+  font-family: 'Cutive Mono';
+}
+
+/* TITLE */
+
+.title {
   background-color: #222;
-  color: white;
+  color: #eee;
   font-family: 'Cutive Mono';
   text-align: center;
-  overflow: hidden;
   display: flex;
   align-items: center;
 }
 
-header .title {
+.title-content {
   margin: 0 auto;
-  animation:
-    fadein 5s ease-in 0.2s 1;
-  animation-fill-mode: both;
+  animation: fadein 1s ease-in 0.1s both 1;
+}
+
+.title-icons {
+  margin-top: 20px;
+}
+
+.title-icons a {
+  margin: 20px 15px;
+}
+
+.title-icons ion-icon {
+  color: #eee;
+}
+
+.title h1 {
+  font-size: 4em;
 }
 
 @keyframes fadein {
@@ -32,124 +78,242 @@ header .title {
   to { opacity: 100% }
 }
 
-header h1 {
-  font-size: 4em;
-}
+/* PROFILE */
 
-header .icons {
-  margin-top: 20px;
-}
-
-header .icons ion-icon {
-  color: white;
-}
-
-header .icons a {
-  margin: 20px;
-}
-
-header .icons a:hover {
-  text-decoration: none;
-}
-
-main {
-    background-color: #eee;
-    min-height: 100vh;
-    padding: 50px;
-    font-family: 'Montserrat';
-    font-size: 16px;
-}
-
-main .title {
-    text-align: center;
-    font-family: 'Cutive Mono';
-    margin: 40px 0 20px 0;
-}
-
-main .subtitle {
-    text-align: center;
-}
-
-.row {
-  width: 100vw;
-    margin: 30px 0;
-}
-
-.project {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.card {
-  background-color: #eee;
-  margin-top: 20px;
-  border: none;
-}
-
-.card button {
-  background-color: #222;
-  color: white;
-}
-
-.card button:hover {
-  background-color: #444;
-  color: white;
-}
-
-.accordion {
+.profile {
   background-color: #eee;
   color: #222;
-  cursor: pointer;
-  padding-top: 18px;
+}
+
+.profile-video--wrapper {
+  width: 70vh;
+  height: 70vh;
+  border-radius: 100%;
+  -webkit-border-radius: 100%; 
+  -moz-border-radius: 100%;
+  transform-box: content-box;
+  transform: translateX(300%) translateY(200px);
+  -webkit-transform: translateX(300%) translateY(50px);
+}
+
+.profile-video {
+  width: 70vh;
+  height: 70vh;
+  border-radius: 100%;
+  object-fit: cover;
+  box-shadow: #888 1px -1px 1px;
+}
+
+.start-animation .profile-video--wrapper {
+  animation: slide-in-from-right 1s forwards;
+  -webkit-animation: slide-in-from-right 1s forwards;
+}
+
+.profile-text {
+  transform: translateX(200px) translateY(-390px);
+  opacity: 0%;
+  display: block;
+  width: 400px;
+}
+
+.start-animation .profile-text {
+  animation: text-fade-in 1s ease-in 0.5s 1;
+  animation-fill-mode: both;
+}
+
+@keyframes slide-in-from-right {
+  100% { transform: translateX(135%) translateY(50px); }
+}
+
+@keyframes text-fade-in {
+  from { opacity: 0% }
+  to { opacity: 100% }
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+  background-color: #222;
+  color: #eee;
+ }
+
+.portfolio-grid--wrapper {
+  margin-top: 2em;
+}
+
+.portfolio-grid--row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3em 1em;
+}
+
+.flip-card {
+  display: inline-block;
+  background-color: transparent;
+  width: 400px;
+  height: 240px;
+  border-radius: 0.5em;
+  perspective: 1000px; /* 3D effect */
+}
+
+.flip-card img {
+  width: 400px;
+  height: 240px;
+  border-radius: 0.5em;
+}
+
+.flip-card-inner {
+  position: relative;
   width: 100%;
+  height: 100%;
   text-align: center;
-  border: none;
-  outline: none;
-  transition: 1s;
+  border-radius: 0.5em;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.active, .accordion:hover {
-  background-color: #ccc;
-  outline: none;
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-#page-content {
-  flex: 1 0 auto;
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5em;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 }
 
-.panel {
-  text-align: left;
-  padding: 0;
-  padding-right: 20px;
+.flip-card-front {
   background-color: #eee;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
-}
-
-.portfolio-image {
-  height: 300px;
-  margin-bottom: 20px;
-}
-
-#portfolio {
-  margin-bottom: 40px;
-}
-
-#technologies {
-  font-size: 44px;
-  text-align: center;
-  margin: 0;
   color: #222;
 }
 
-footer {
-  height: 60px;
-  padding: 20px;
+.flip-card-back {
+  background-color: #eee;
+  color: #222;
+  padding: 2em 1em;
+  transform: rotateY(180deg);
+}
+
+.flip-card .btn {
   background-color: #222;
-  color: white;
+  color: #eee;
+}
+
+.flip-card .btn:hover {
+  background-color: #444;
+  color: #eee;
+}
+
+/* TECH STACK */
+
+.tech {
+  background-color: #eee;
+  color: #222;
+  text-align: center;
+}
+
+.tech-grid--wrapper {
+  height: 80vh;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tech-grid--row {
+  margin-bottom: 3em;
+}
+
+.tech-grid--row .icon-block {
+  display: inline-block;
+  animation: var(--animation-key) 10s linear forwards infinite;
+}
+
+.tech-grid--row i {
+  display: inline-block;
+  margin: 0 0.3em;
+  font-size: 5em;
+}
+
+/* flicker effect used for tech stack icon blocks */
+:root {
+  --animation-key: none;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* CONTACT */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+
+.contact h2 {
+  margin-bottom: 1em;
+}
+
+.contact--input-sm {
+  padding: 4px 8px;
+  width: 30vw;
+}
+
+.contact--input-lg {
+  padding: 6px 10px;
+  width: 60vw;
+}
+
+.contact textarea {
+  resize: none;
+}
+
+.contact .btn {
+  background-color: darkgoldenrod;
+  color: #eee;
+}
+
+.contact .btn:hover {
+  background-color: rgb(146, 107, 8);
+}
+
+.footer {
+  height: 72px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: 1em;
+  background-color: #222;
+  color: #eee;
   font-family: 'Cutive Mono';
   flex-shrink: none;
   font-size: small;
   text-align: center;
+}
+
+.footer-icons ion-icon {
+  color: #eee;
+}
+
+.footer-icons a {
+  margin: 1em;
 }
