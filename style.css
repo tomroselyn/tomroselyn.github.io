@@ -99,12 +99,40 @@ h1, h2 {
 .profile {
   background-color: #eee;
   color: #222;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+
+.profile video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateX(-50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+.profile .overlay {
+  position: absolute;
+  /* display: none; */
+  /* top: 100vh; */
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0.1;
+  z-index: 1;
 }
 
 .profile-content {
   margin-top: 3em;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  position: relative;
+  text-align: center;
+  z-index: 2;
 }
 
 .profile-video--frame {
@@ -139,29 +167,20 @@ video {
   height: auto;
 }
 
-.start-animation .profile-video--wrapper {
-  animation: slide-in-from-right 1.5s ease-out 0.1s forwards 1;
-  -webkit-animation: slide-in-from-right 1.5s ease-out 0.1s forwards 1;
-}
-
 .profile-text {
   opacity: 0%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   line-height: 2em;
-  width: 38vw;
+  width: 80vw;
   max-height: 80vh;
   overflow: hidden;
+  margin: 2em auto;
 }
 
 .start-animation .profile-text {
   animation: text-fadein 1s ease-in 0.2s both 1;
-}
-
-@keyframes slide-in-from-right {
-  from { transform: translateX(250%)}
-  to { transform: translateX(0%) }
 }
 
 @keyframes text-fadein {
@@ -322,4 +341,10 @@ video {
 .contact a:hover {
   color: #eee;
   text-decoration: none;
+}
+
+@media (max-width: 378px) {
+  .contact h2 {
+    font-size: 1em;
+  }
 }
